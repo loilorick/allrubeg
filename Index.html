@@ -1,0 +1,627 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Всё о игре "РУБЕЖ"</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style2.css">
+<link rel="stylesheet" href="css/style4.css">
+<link rel="stylesheet" href="css/Главная.css">
+
+<style>
+
+
+/*Главная*/
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #F0FFFF;
+}
+
+.image-heading {
+    font-size: 16px;
+	opacity: .95;
+	border-radius: 10px 10px 0px 0px;
+	padding: 6px ;
+	font-weight: 500;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 22px;
+    
+}
+
+.gerb {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px ;
+    transition: 0.3s;
+}
+
+
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* ACTIVE BUTTON*/
+.tab button.active {
+    background-color: red;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+	background-color: white;
+	
+	
+}
+/*Картинки*/
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 5px 5px 5px 5px;
+}
+#myImg1 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+	height: 200;
+    margin: 5px 5px 5px 5px;
+}
+#myImg2 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+	height: 200;
+    margin: 5px 5px 5px 5px;
+}
+
+#myImg3 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+	height: 200;
+    margin: 5px 5px 5px 5px;
+}
+
+#myImg4 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+	height: 200;
+    margin: 5px 5px 5px 5px;
+}
+
+#myImg5 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+	height: 200;
+    margin: 5px 5px 5px 5px;
+}
+
+#myImg6 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+	height: 200;
+    margin: 5px 5px 5px 5px;
+}
+
+#myImg7 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+	height: 200;
+    margin: 5px 5px 5px 5px;
+}
+
+#myImg:hover {opacity: 0.7;}
+#myImg1:hover {opacity: 0.7;}
+#myImg2:hover {opacity: 0.7;}
+#myImg3:hover {opacity: 0.7;}
+#myImg4:hover {opacity: 0.7;}
+#myImg5:hover {opacity: 0.7;}
+#myImg6:hover {opacity: 0.7;}
+#myImg7:hover {opacity: 0.7;}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+
+</style>
+</head>
+<body background="img/Фон.jpg">
+<div class="table">
+<table border=0 width=100%>
+  <tr>
+   <td><img class="image-heading" src="img/шапка.jpg" width="100%"></td>
+  </tr>
+ </table>
+</div>
+ 
+
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'РУБЕЖ')" style="font-family: ARIAL BLACK;">Главная</button>
+  <button class="tablinks" onclick="openCity(event, 'Pravila')" style="font-family: ARIAL BLACK;">Правила</button>
+  <button class="tablinks" onclick="openCity(event, 'Задания')" style="font-family: ARIAL BLACK;">Задания</button>
+  <button class="tablinks" onclick="openCity(event, 'Новости')" style="font-family: ARIAL BLACK;">Новости</button>
+  <button class="tablinks"  style="font-family: ARIAL BLACK;"><a href="Викторина.html"  style="text-decoration: none; ">Викторина</a></button>
+  <div class="gerb"><img  src="img/герб.png" height="32px" width="32px" ></div>
+</div>
+
+<div id="РУБЕЖ" class="tabcontent">
+<p align=right  style="font-style : italic; font-family: ARIAL; font-variant : small-caps; "><br>Всё достояние отчизны охраняя
+<br>На рубежах передних щит стоит
+<br>Броня России сила боевая
+<br>Свободу, мир и труд людей хранит.
+<br>Броня России нашей боевая
+<br>Свободу, мир и труд людей хранит.</p>
+  <h1 style="font-family: ARIAL BLACK;">Что это за игра?</h1>
+  <p style="font-family: ARIAL; font-size: 21px; text-indent: 25px;">Деятельность проекта военно-патриотической игры «Рубеж» направлена на военно-патриотическое воспитание допризывной молодёжи в возрасте 14-17 лет.
+  Проект направлен на реализацию задач государственной программы «Патриотическое воспитание граждан Российской Федерации».
+  «Рубеж» даст участникам бурю эмоций в реализации индивидуальных навыков по начальной военной подготовке, в совершенствовании военно-патриотической
+  и спортивной деятельность.</p>
+  <h3 style="font-family: ARIAL BLACK;">Цели и Задачи игры</h3>
+  <p style="font-family: ARIAL; font-size: 20px;">1. Способствовать сохранению и укреплению традиций, связанных с патриотическим воспитанием школьников в рамках военно-спортивных игр.</p>
+  <p style="font-family: ARIAL; font-size: 20px;">2. Вовлечение участников проекта в процесс активного сохранения и расширения пространства исторической памяти о Великой Отечественной войне.</p>
+  <p style="font-family: ARIAL; font-size: 20px;">3. Развитие мотивации подростков и молодёжи допризывного возраста  к защите Отечества и подготовка её к службе в Вооруженных Силах Российской Федерации.</p>
+  <p style="font-family: ARIAL; font-size: 20px;">4. Способствовать: приобретению навыков в области гражданской обороны.</p>
+  <p style="font-family: ARIAL; font-size: 20px; margin-bottom: 50px;">5. Изучить основы безопасности военной службы, устройства и правил обращения со стрелковым оружием, основ тактической, строевой подготовок, сохранения здоровья и военно-медицинской подготовки.</p>
+   <div class="history"> <h1 style="font-family: ARIAL BLACK;">История</h1>
+    <p style="font-family: ARIAL; font-size: 20px; text-indent: 20px;"><img src="img/Фото.jpg" style="border-radius: 10px;" width="280" height="180"  align="left"  vspace="5" hspace="5">Пионерская военно-спортивная игра в СССР представляла собой имитацию боевых действий,
+         похожую на военные учения. В ходе игры пионеры делились на команды и соревновались в различных военно-прикладных видах спорта с игровыми элементами. 
+        Игра являлась частью системы начальной военной подготовки школьников в СССР</p>
+    <p  style="font-family: ARIAL; font-size: 20px; text-indent: 20px;">Официально военно-спортивная игра «Зарница»(Рубеж) была организована в СССР в 1967 году.
+         Целью игры было военно-патриотическое воспитание советской молодёжи.
+         «Зарница» входила в план организации начальной военной подготовки в средних учебных заведениях в связи с сокращением военной службы с 3 до 2 лет.<img src="img/Фото2.jpg" style="border-radius: 10px; margin-right: 10px;" width="240" height="140"  align="right"  vspace="10"></p>
+    <p  style="font-family: ARIAL; font-size: 20px; text-indent: 20px; margin-bottom: 40px;">Основными организаторами всероссийской игры являются Министерство образования и науки РФ,
+         Министерство обороны РФ и общественная организация «Российский союз молодёжи».
+         В программу «Рубеж» входят смотр строя и песни,
+         проверка знаний по военной истории и символике России, правилам дорожного движения,
+         ориентирование на местности, стрельба, метание гранаты, силовые упражнения,
+         спортивная и военизированная эстафеты и другие военно-спортивные состязания.</p>   
+    </div>    
+
+        <table align="center" style="margin-bottom: 40px; background-color: rgb(61, 61, 61); border-radius: 10px;"><div class="image-tabcontent">
+            <tr><td><img id="myImg" src="img/Рубеж.jpg" alt="РУБЕЖ" style="width:100%;max-width:300px"></td>
+            <td><img id="myImg1" src="img/Фото14.jpg" alt="Построение на соревнования" style="width:100%;max-width:300px"></td>
+            <td><img id="myImg2" src="img/Рубеж 3.jpg" alt="Финал Рубеж 54" style="width:100%;max-width:300px"></td>
+            <td><img id="myImg3" src="img/Рубеж4.jpg" alt="Финал Рубеж 54" style="width:100%;max-width:300px"></td></tr>
+            <tr><td><img id="myImg4"  src="img/Рубеж5.jpg" alt="Финал Рубеж 54" style="width:100%;max-width:300px"></td>
+                <td><img id="myImg5"  src="img/Рубеж6.jpg" alt="Финал Рубеж 54" style="width:100%;max-width:300px"></td>
+                <td><img id="myImg6"  src="img/Фото10.jpg" alt="Финал Рубеж 54" style="width:100%;max-width:300px"></td>
+                <td><img id="myImg7"  src="img/Фото15.jpg" alt="Финал Рубеж 54" style="width:100%;max-width:300px"></td></tr>
+          </div></table>
+
+<div id="myModal" class="modal">
+  <span class="close">Х</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+</div>
+
+<div id="Pravila" class="tabcontent">
+  <h1 style="font-family: ARIAL BLACK;">Какие существуют правила?</h1>
+  <font size=5><p style="font-family: ARIAL BLACK;">Правила для соблюдения:</p></font>
+  <font size=4><ul style="margin-bottom: 20px;">
+  <li style="font-family: ARIAL">соблюдать единую форму одежды;</li>
+  <li style="font-family: ARIAL">выполнять команды командира;</li>
+  <li style="font-family: ARIAL">соблюдать правильность построения в шеренги;</li>
+  <li style="font-family: ARIAL">докладыват о готовности к смотру;</li>
+  <li style="font-family: ARIAL">отвечать на приветствие и поздравление;</li>
+  <li style="font-family: ARIAL">не нарушать дисциплину</li>
+  <li style="font-family: ARIAL">не нарушать последовательность этапов</li>
+  <li style="font-family: ARIAL">не нарушать правила безопасности</li>
+  <li style="font-family: ARIAL">двигаться строевым шагом в составе отделения;</li>
+  </ul></font>
+  <h1 style="font-family: ARIAL BLACK;">История появления правил для игры</h1>
+  <p style="font-family: ARIAL; font-size: 20px;">Первые правила игры разработала учительница
+     Зоя Кротова  из села Мысы Краснокамского района Пермской области.
+     23 февраля 1964 года была проведена первая игра совместно с военными.<img src="img/Кротова.jpg" style="border-radius: 10px;" width="160" height="230"  align="left"  vspace="5" hspace="5"></p>
+  <p style="font-family: ARIAL; font-size: 20px; margin-bottom: 50px; text-indent: 20px;">Играющие в «Зарницу» участники делились на две команды, арбитра и нескольких нейтральных наблюдающих.
+         Затем, пока команды вырабатывают тактику, арбитр определяет местоположение баз обоих лагерей противников;
+         меткой базы является какой-то достаточно заметный предмет, например, флаг.
+         Целью обеих команд является захват флага противника.
+         У каждого из участвующих есть индикатор жизни/здоровья — погоны:
+         каждому человеку наклеиваются или пришиваются по два погона на плечи; у капитана их четыре.
+         Для того, чтобы «убить» человека, надо сорвать с него погоны;
+         если сорвана только половина, то человек не может бегать и просто ходит.
+         Чаще всего победитель определялся по сумме набранных им баллов:
+         за захват флагов и уничтожение противников баллы начисляются, за нечестную игру уменьшаются.
+         Иногда победителем считали первого, добывшего флаг противника.</p>
+</div>
+
+<div id="Задания" class="tabcontent">
+  <h1 style="font-family: ARIAL BLACK;">Как проходит игра?</h1>
+  <p style="font-family: ARIAL; font-size: 19px; text-indent: 20px;">Игра построена в форме военно-спортивной эстафеты, где команды, продвигаясь по трассе, маршрут которой указан на карте. На маршруте находятся контрольные пункты — КП. На КП находится ведущий этапа, который сообщает содержание этапа и фиксирует правильность его выполнения. Отметку о выполнении этапа посредник заносит в маршрутный лист.</p>
+  <h1 style="font-family: ARIAL BLACK;">Какие есть задания?</h1>
+  <p style="font-family: ARIAL; font-size: 24px;">Полоса препятствий,   включает в себя игры и задания, в ходе выполнения которых, участники приобретут знания:</p>
+  <p style="font-family: ARIAL; font-size: 24px;">1. «Основы медицинской доврачебной помощи» (правила наложения шины, повязок, переноска пострадавших);
+    <details>
+        <summary>Подробнее</summary>
+        <p><ol><b>Общее положение:</b><li>оценка состояния пострадавшего</li>
+             <li>определение характера травмы, создающей наибольшую угрозу для жизни пострадавшего, и последовательности действий по его спасению;</li></ol>
+        <b>Кровотечение на ноге:</b><ol><li>Прижать кулаком бедренную артерию в точке ее пережатия.</li>
+            <li>Наложить жгут через опорный предмет (скатку бинта).</li>
+            <li>Вложить записку о времени наложения жгута.</li></ol>
+            <b>Можно получить:</b> 25 баллов</p>
+        <ol><b>Удушье у младенца(кукла):</b>
+            <li>Убедиться в наличии пульса на плечевой артерии, повернуть его на живот.</li>
+            <li>В положении на животе ввести ему в рот указательный палец и извлечь из ротовой полости инородное тело.</li>
+            <li>Если младенец не отреагирует криком, то слегка похлопать ладонью по спине или ягодицам пока не появится крик.</li></ol>
+            <br><b>Можно получить:</b> 15 баллов</p>
+        <ol><b>Мотоциклист (чучело) с признаками комы:</b>
+            <li>Устранить действие электрического тока на пострадавшего.</li>
+            <li>Убедиться в отсутствии признаков клинической смерти и наличии пульса на сонной артерии, положить в восстановительную позу на правом боку.</li>
+           </ol>
+            <br><b>Можно получить:</b> 30 баллов</p>
+    </details>
+  <p style="font-family: ARIAL; font-size: 24px;">2. Боевая подготовка (стрельба из имитационного оружия, приемы самозащиты, метание гранаты (МУЛЯЖ) в цель, бег с препятствием);</p>
+  <p style="font-family: ARIAL; font-size: 24px;">3. Радиохимическая, биологическая защита;</p>
+  <details>
+    <summary>Подробнее</summary>
+    <h3>Противогаз</h3>
+    <p>Противогаз в <b>«походном»</b> положении на левом боку. 
+        Верх сумки на уровне талии, клапан застегнут.
+        По команде  <b>«Газы!»</b> участник задерживает дыхание, закрывает глаза.
+        Вынимает противогаз из сумки.
+        Берёт шлем-маску обеими руками за утолщение края у нижней части так, чтобы большие пальцы ладони были снаружи, а остальные внутри её. 
+        Прикладывает нижнюю часть шлем-маски под подбородок и резким движением рук вверх и назад натягивает её на голову так, чтобы не было складок,
+        а очковый узел располагался против глаз. Устраняет перекос и складки, если они образовались при надевании шлем-маски, делает полный выдох,
+        открывает глаза и возобновляет дыхание.</p>
+
+       <p><em>По команде судьи противогаз снимается произвольно.</em></p>
+
+    <h3>Общевойсковой защитный комплект (ОЗК)</h3>
+    <p>Общевойсковой защитный комплект (ОЗК) лежит на полу перед участником, противогаз в «походном» положении.
+    По команде «Плащ в рукава, чулки, перчатки надеть, газы!» участник должен: достать чулки и перчатки из капюшона плаща; 
+    надеть защитные чулки, застегнуть хлястики, начиная с нижних и завязать обе тесьмы на поясном ремне; 
+    надеть противогаз; надеть перчатки; надеть плащ в рукава, накинуть капюшон на голову и застегнуть борта плаща, оставляя противогазовую сумку под плащом; 
+    надеть петли рукавов на большие пальцы кистей рук поверх перчаток. Выполнив норматив, подать установленный сигнал.</p>
+   
+    </details>
+  <p style="font-family: ARIAL; font-size: 24px;">4. Нормативы по одеванию боекомплекта;</p>
+  <p style="font-family: ARIAL; font-size: 24px;">5. Получают навыки сборки/разборки автомата.
+	Для зрителей/болельшиков, ожидающих у финиша команды, организуются тематические, познавательно - развлекательные площадки, такие как:<br> «Сборка/разборка автомата.
+	-третий, «Итоговый», этап, - реализации проекта.</p>
+    <details>
+        <summary>Подробнее</summary>
+        <p>Условия выполнения норматива.
+
+            <br><b>1.</b> Автомат лежит на столе (чистой подстилке) дульной частью вперед, а ручной пулемет установлен на сошку дульной частью влево. У автомата (ручного пулемета) магазин пристегнут.
+            
+            <br><b>2.</b> Обучаемый находится у оружия (на исходном положении) с опущенными руками.
+            
+            <br>Порядок выполнения норматива
+            
+            <br>Руководитель занятия указывает подает команду: <b>«К неполной разборке/сборке оружия – ПРИСТУПИТЬ».</b>
+            
+            <br>При выполнении неполной разборке/сборке автомата (ручного пулемета) обучаемый отделяет магазин и проверяет, нет ли патрона в патроннике. Вынимает пенал принадлежности из гнезда приклада. Последовательно отделяет шомпол, дульный тормоз-компенсатор (у пулемета – пламегаситель), крышку ствольной коробки, возвратный механизм, затворную раму с затвором, затвор от затворной рамы и газовую трубку со ствольной накладкой.
+            
+            <br>Время отсчитывается от команды <b>«К неполной разборке/сборке оружия – ПРИСТУПИТЬ»</b> до доклада обучаемого «ГОТОВО».
+            
+            
+            <p><br>Вид оружия – автомат АК-74
+            
+            <br>Оценка по времени (секунд):
+            
+            <br><b>«отлично» - 18 сек</b>
+            
+            <br><b>«хорошо» - 22 сек</b>
+            
+            <br><b>«удовлетворительно» - 26 сек</b></p>
+    </details>
+
+<table align="center">
+<div class="image-bb" style="padding-left: 35px; border-radius: 10px; margin-top: 20px;">
+  <tr><td><img src="img/Автомат.jpg"  style=" margin: 5px 5px 5px 5px; border-radius: 5px; cursor: pointer; transition: 0.3s; width:100%;max-width:300px;"></td>
+    <td><img src="img/Медецина.jpg"  style="margin: 5px 5px 5px 5px; border-radius: 5px; cursor: pointer; transition: 0.3s; width:100%;max-width:300px"></td>
+    <td><img src="img/Боекомплект.jpg" style="margin: 5px 5px 5px 5px; border-radius: 5px; cursor: pointer; transition: 0.3s; width:100%;max-width:300px"></td>
+    <td> <img src="img/Стрельба.jpg" style="margin: 5px 5px 5px 5px; border-radius: 5px; cursor: pointer; transition: 0.3s; width:100%;max-width:300px"></td>
+</tr></div>
+</table>   
+</div>
+
+<div id="Новости" class="tabcontent">
+  <h1 style="font-family: ARIAL BLACK;"><a id="новости"></a>Новости</a></h1>
+  <div style="width: 100%;
+  border-top:3px solid red;
+  border-bottom: dotted 3px red;
+  padding-left:10px;">
+  </div>
+
+  
+
+ 
+  <font size=4><p style="font-family: ARIAL BLACK; margin-top: 15px;">В Севастополе стартовал финал региональной военно-патриотической спортивной игры «Рубеж-54»</p></font>
+  <p style="color: red; ">22.09.2021</p>
+  <br><font size=6>Участия в соревнованиях приняли 19 Севастопольских школ!</font>
+  <br><font size=6> Призовые места заняли следующие школы:</font>
+  <br><font  size=5>1 место - Школа №60</font>
+  <br><font  size=5>2 место - Школа №5</font>
+  <br><font  size=5>3 место - Школа № 33</font>
+  <p align=left><iframe width="560" height="315" src="https://www.youtube.com/embed/1EEH1DogDOc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>
+  <p style="font-size: 19px; font-family: ARIAL BLACK;">Елена Богомолова, директор департамента образования и науки г. Севастополя:</p>
+  <p style="font-style : italic; font-family: ARIAL; font-size: 16px;">«С 67-го года, на следующий год будет юбилей.Эта игра ежегодно проходит.
+     Менялись государства, менялись дети, но игра оставалась. 
+     Я сама, когда училась в школе — заканчивала тридцать четвертую — мы точно также принимали участие в игре «Рубеж».</p>
+	 <p style="font-family: ARIAL; font-size: 16px;">Организаторы игры чтят традиции.
+	 Однако это не мешает ежегодно обновлять и привносить что-то новое в конкурсную программу.
+	 В этом году таким новшеством станет «Рубежный тик-ток».</p>
+
+</div>
+
+    
+	
+	
+	<div>
+	<footer color=white id="footer" class="footer-1">
+<div class="main-footer widgets-dark typo-light">
+<div class="container">
+<div class="row">
+   
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="widget subscribe no-box">
+<h5 class="widget-title" style="font-family: ARIAL BLACK;">Военно-Патриотическая игра РУБЕЖ<span></span></h5>
+<p style="font-family: ARIAL BLACK;">Кирилл Раков </p>
+</div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="widget no-box">
+<h5 class="widget-title" style="font-family: ARIAL BLACK;"><span>Контакты</span></h5>
+<ul class="thumbnail-widget">
+<li>
+<div class="thumb-content"><a href="https://vk.com/cmkmomchik_autowin." style="font-family: ARIAL BLACK;">ВКонтакте</a></div>  
+</li>
+<li>
+<div class="thumb-content"><a href="https://www.instagram.com/kirill_rakov/." style="font-family: ARIAL BLACK;">Инстаграм</a></div>  
+</li>
+<li>
+<div class="thumb-content">+7 978 507 71 90</div>  
+</li>
+<li>
+<div class="thumb-content">+7 978 038 00 21</div>  
+</li>
+</ul>
+</div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="widget no-box">
+<h5 class="widget-title" style="font-family: ARIAL BLACK;">Добро Пожаловать, ПАТРИОТ!<span></span></h5>
+
+<div class="thumb-content"><a onclick="openCity(event, 'Новости')" style="font-family: ARIAL BLACK; cursor: pointer;">Новости</a></div> 
+<div class="thumb-content"><a onclick="openCity(event, 'РУБЕЖ')" style="font-family: ARIAL BLACK; cursor: pointer;">Главная</a></div> 
+<div class="thumb-content"><a onclick="openCity(event, 'Pravila')" style="font-family: ARIAL BLACK; cursor: pointer;">Правила</a></div> 
+<div class="thumb-content"><a onclick="openCity(event, 'Задания')" style="font-family: ARIAL BLACK; cursor: pointer;">Задания</a></div> 
+
+</div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-3">
+
+<div class="widget no-box">
+<h5 class="widget-title" style="font-family: ARIAL BLACK;">Почта<span></span></h5>
+
+<p><a href="https://kirusha.rakov53@gmail.com/?utm_source=OGB&tab=mk&utm_medium=act&gar=1" title="glorythemes" style="font-family: ARIAL BLACK;">kirusha.rakov53@gmail.com</a></p>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+   
+<div class="footer-copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-12 text-center">
+<p style="font-family: ARIAL BLACK;">Кирилл Раков © 2022. Все права защищены.</p>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+	
+
+<script src="script.js"></script>
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+/*Картинки*/
+var modal = document.getElementById('myModal');
+
+
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+var img = document.getElementById('myImg1');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+var img = document.getElementById('myImg2');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var img = document.getElementById('myImg3');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var img = document.getElementById('myImg4');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var img = document.getElementById('myImg5');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var img = document.getElementById('myImg6');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var img = document.getElementById('myImg7');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+
+
+</script>
+
+ 
+</body>
+</html> 

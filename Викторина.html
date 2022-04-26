@@ -1,0 +1,263 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style2.css">
+<link rel="stylesheet" href="css/style4.css">
+<style>
+
+/*Кнопка*/
+.button {
+  border-radius: 6px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-right: 100%;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/*Заголовок*/
+
+.three {
+  background: #FCF2E5;
+  padding: 50px 20px;
+  text-align: center;
+} 
+.three h1 {
+  font-family: 'Merriweather', serif;
+  position: relative;
+  color: #FCF2E5;
+  background: #90806A;
+  font-size: 2.5em;
+  font-weight: normal;
+  padding: 10px 40px;
+  display: inline-block;
+  margin: 0;
+  line-height: 1;
+}
+.three h1:before {
+  content: ""; 
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: -15px;
+  background: #90806A;
+}
+.three h1:after {
+  content: ""; 
+  position: absolute;
+  height: 0;
+  width: 80%;
+  border-top: 10px solid #90806A;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -25px;
+}
+@media (max-width: 500px) {
+  .three h1 {font-size: 1.8em;}
+}
+@media (max-width: 400px) {
+  .three h1 {
+    font-size: 1.5em;
+    padding: 10px 30px;
+  }
+}
+
+/*Викторина*/
+.quiz {
+  background: #FCF2E5;
+    padding: 50px 20px;
+}
+
+
+</style>
+</head>
+<body>
+
+    
+
+<div class="three"><a href="Index.html"><button class="button" ><span style="font-size: 15px;">Вернуться назад</span></button></a><h1>ВИКТОРИНА</h1></div>
+
+<hr style="background: #FCF2E5;
+width:100%;
+text-align: center; 
+float:right; 
+background:linear-gradient(90deg, #fc4848, #f8c2c2);
+border:none!important;
+border-radius:5px;
+height:10px;">
+
+<form align=left  name="quiz" class="quiz" id="quiz" action="javascript:check();">
+    <h3> Какое из этих испытаний отсутствует в игре "РУБЕЖ"? </h3>
+    <input name="vopros1"  value="yes" id="value1" type="radio"> Решение математических задач<br>
+    <input name="vopros1" value="no" id="value2" type="radio"> Разборка/Сборка автомата <br>
+    <input name="vopros1" value="no" id="value3" type="radio"> Одевание боекомплекта <br>
+    <input name="vopros1" value="no" id="value4" type="radio"> Стрельба <br>
+    
+    <h3> Есть ли испытание "Метание гранаты" в игре "РУБЕЖ"? </h3>
+    <input name="vopros2"  value="yes" id="value1" type="radio"> Так точно! <br>
+    <input name="vopros2" value="no" id="value2" type="radio"> Никак нет! <br>
+    
+    <h3> Что из этого обязательно должно быть у вашей команды? </h3>
+    <input name="vopros3"  value="no" id="value1" type="radio"> Химзащита <br>
+    <input name="vopros3" value="no" id="value2" type="radio"> Флаг команды <br>
+    <input name="vopros3" value="yes" id="value3" type="radio"> Единая форма <br>
+    <input name="vopros3" value="no" id="value4" type="radio"> Гимн команды <br>
+    <br>
+
+    <h3> Кто придумал правила для игры? </h3>
+    <input name="vopros4"  value="no" id="value1" type="radio">  Василий Казаков <br>
+    <input name="vopros4" value="yes" id="value2" type="radio"> Зоя Кротова <br>
+    <input name="vopros4" value="no" id="value3" type="radio"> Владимир Машатин <br>
+    <input name="vopros4" value="no" id="value4" type="radio"> Дмитрий Галустян <br>
+    <br>
+
+    <h3> Со скольки лет можно участвовать в игре? </h3>
+    <input name="vopros5"  value="no" id="value1" type="radio">  c 18 <br>
+    <input name="vopros5" value="no" id="value2" type="radio"> c 6 <br>
+    <input name="vopros5" value="no" id="value3" type="radio"> c 12 <br>
+    <input name="vopros5" value="yes" id="value4" type="radio"> c 14 <br>
+    <br>
+
+    <input type="submit"  class="input" value="Проверить" type="submit">
+    </form>
+
+
+
+
+
+    <div>
+        <footer color=white id="footer" class="footer-1">
+    <div class="main-footer widgets-dark typo-light">
+    <div class="container">
+    <div class="row">
+       
+    <div class="col-xs-12 col-sm-6 col-md-3">
+    <div class="widget subscribe no-box">
+    <h5 class="widget-title" style="font-family: ARIAL BLACK;">Военно-Патриотическая игра РУБЕЖ<span></span></h5>
+    <p style="font-family: ARIAL BLACK;">Кирилл Раков </p>
+    </div>
+    </div>
+    
+    <div class="col-xs-12 col-sm-6 col-md-3">
+    <div class="widget no-box">
+    <h5 class="widget-title" style="font-family: ARIAL BLACK;"><span>Контакты</span></h5>
+    <ul class="thumbnail-widget">
+    <li>
+    <div class="thumb-content"><a href="https://vk.com/cmkmomchik_autowin." style="font-family: ARIAL BLACK;">ВКонтакте</a></div>  
+    </li>
+    <li>
+    <div class="thumb-content"><a href="https://www.instagram.com/kirill_rakov/." style="font-family: ARIAL BLACK;">Инстаграм</a></div>  
+    </li>
+    <li>
+    <div class="thumb-content">+7 978 507 71 90</div>  
+    </li>
+    <li>
+    <div class="thumb-content">+7 978 038 00 21</div>  
+    </li>
+    </ul>
+    </div>
+    </div>
+    
+    <div class="col-xs-12 col-sm-6 col-md-3">
+    <div class="widget no-box">
+    <h5 class="widget-title" style="font-family: ARIAL BLACK;">Добро Пожаловать, ПАТРИОТ!<span></span></h5>
+    
+    <div class="thumb-content"><a href="Index.html" style="font-family: ARIAL BLACK;">Главная</a></div>  
+    
+    </div>
+    </div>
+    
+    <div class="col-xs-12 col-sm-6 col-md-3">
+    
+    <div class="widget no-box">
+    <h5 class="widget-title" style="font-family: ARIAL BLACK;">Почта<span></span></h5>
+    
+    <p><a href="https://myaccount.google.com/?utm_source=OGB&tab=mk&utm_medium=act&gar=1" title="glorythemes" style="font-family: ARIAL BLACK;">kirusha.rakov53@gmail.com</a></p>
+    
+    </div>
+    </div>
+    
+    </div>
+    </div>
+    </div>
+       
+    <div class="footer-copyright">
+    <div class="container">
+    <div class="row">
+    <div class="col-md-12 text-center">
+    <p style="font-family: ARIAL BLACK;">Кирилл Раков © 2022. Все права защищены.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </footer>
+
+
+
+    <script>
+     function check()
+     {
+     var yes=0;
+     var no=0;
+     var otvet="";
+     var choice;
+     for (var v=1; v<=5; v++)
+     {
+     var q = document.forms['quiz'].elements['vopros'+v];
+      for (var i=0; i<q.length; i++)
+      {
+      if (q[i].checked) {
+      choice=q[i].value;
+      }
+      }
+      if (choice=="yes") {yes++;}
+      if (choice=="no") {no++;}
+     }
+     switch (true) {
+     case (yes<3): otvet="Плохо. Попробуйте еще.";break;
+     case (yes==3): otvet="Молодец, почти все правильно.";break;
+     case (yes==4): otvet="Очень хорошо!Но есть одна ошибка.";break;
+     case (yes>4): otvet="Очень хорошо!Все правильно.";break;
+     default: otvet="очень плохо";break;
+     }
+     alert(otvet);
+     }
+    </script>
+
+</body>
+</html>
